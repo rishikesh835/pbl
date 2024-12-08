@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .task-list {
+            margin-top: 1rem;
+        }
+        .task {
+            display: flex;
+            justify-content: space-between;
+            background: #f9f9f9;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 0.4rem 0.8rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .add-btn {
+            background-color: #6200ea;
+            color: white;
+        }
+        .delete-btn {
+            background-color: #ff5252;
+            color: white;
+        }
+        .update-btn {
+            background-color: #03dac5;
+            color: white;
+        }
+        form {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Task Management App</h1>
+    </header>
+    <div class="container">
+        <h2>Your Tasks</h2>
+        <div class="task-list">
+            <!-- Example tasks -->
+            <div class="task">
+                <span>Complete Spring Boot Tutorial</span>
+                <div>
+                    <button class="update-btn">Update</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+            <div class="task">
+                <span>Prepare for the Demo</span>
+                <div>
+                    <button class="update-btn">Update</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <h2>Add New Task</h2>
+        <form action="/addTask" method="post">
+            <input type="text" name="taskName" placeholder="Enter new task" required>
+            <button class="add-btn" type="submit">Add Task</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
